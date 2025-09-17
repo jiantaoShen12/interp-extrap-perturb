@@ -1,6 +1,6 @@
 Code Availability: https://github.com/theislab/CFGen
 Description: CFGen is a flow-based model for producing multi-modal scRNA-seq data.
-  CFGen builds on CellFlow and explicitly models the discrete, over-dispersed nature
+  CFGen builds on cellFlow (Palma et al.) and explicitly models the discrete, over-dispersed nature
   of single-cell counts when generating synthetic data.
 Inspired by:
 - CellFlow

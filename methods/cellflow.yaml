@@ -1,8 +1,12 @@
 Code Availability: https://github.com/theislab/CellFlow
-Description: CellFlow learns a vector field to predict time-dependent expression profiles
-  under diverse conditions. The model encodes various covariates (perturbation, dosage,
-  batch, etc.), aggregates the embeddings via attention and deep sets, and uses a
-  conditional flow matching framework to learn the underlying flow of the effect.
+Description: CellFlow (Klein et al.) learns a neural vector field parameterised as a neural ODE,
+ which predicts single-cell expression profiles under a wide range of experimental conditions. 
+ The model encodes perturbations (labels or embeddings), covariates (dosage, batch, time, etc.), and sample descriptors
+ using specialised embeddings, aggregates these using permutation-invariant pooling (multi-head attention or deep sets),
+ and uses the resulting joint embedding to condition the flow module. 
+ Flow matching and optimal transport are used to align control and perturbed cells, 
+ thereby modeling both cellular heterogeneity and perturbation-specific effects,
+ and enabling accurate counterfactual predictions.
 Inspired by:
 - CellOT
 Method: cellFlow
@@ -16,4 +20,4 @@ Task:
 - Context Transfer
 - Unseen Perturbation Prediction
 - Combinatorial Effect Prediction
-Year: 2024
+Year: 2025
