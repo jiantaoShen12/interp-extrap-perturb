@@ -9,8 +9,8 @@ Method: ARTEMIS
 Model:
 - VAE
 - Schrödinger Bridge
-Publication: https://www.biorxiv.org/content/biorxiv/early/2025/01/26/2025.01.23.634618.full.pdf
-Published: false
+Publication: https://academic.oup.com/bioinformatics/article/41/Supplement_1/i189/8199396
+Published: true
 Task:
 - Trace Cell Populations
 Year: 2025
