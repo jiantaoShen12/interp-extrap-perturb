@@ -12,6 +12,7 @@ Method: MFM
 Model:
 - Flow Matching
 - Optimal Transport
+- Time-resolved
 Publication: https://proceedings.neurips.cc/paper_files/paper/2024/file/f381114cf5aba4e45552869863deaaa7-Paper-Conference.pdf
 Published: true
 Task:

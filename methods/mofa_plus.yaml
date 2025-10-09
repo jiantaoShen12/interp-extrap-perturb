@@ -1,0 +1,21 @@
+Code Availability: https://github.com/bioFAM/MOFA2
+Description: Multi-Omics Factor Analysis v2 (MOFA+) builds builds upon Bayesian Group Factor Analysis,
+             using a matrix factorization approach to infer a low-dimensional representation of typically
+             multi-modal data in the form of latent factors that capture the primary sources of variation
+             across different data types (e.g., RNA expression, DNA methylation) and sample groups. 
+             MOFA+ is trained using GPU-accelerated stochastic variational inference which ensures 
+             scalability. It also combines Automatic Relevance Determination (ARD) priors, 
+             which disentangle variation shared across or unique to specific data modalities and sample groups,
+             with sparsity-inducing spike-and-slab priors on both factors and weights.
+Inspired by:
+- Group Factor Analysis
+Method: MOFA+
+Model:
+- Group Factor Model
+- Multi-modal
+Publication: https://link.springer.com/article/10.1186/s13059-020-02015-1
+Published: true
+Task:
+- Linear Gene Programmes
+- Unsupervised Disentanglement
+Year: 2020

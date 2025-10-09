@@ -1,0 +1,21 @@
+Code Availability: https://github.com/bioFAM/MOFA2
+Description: MEFISTO extends MOFA+ by incorporating continuous covariates, such as time or spatial coordinates. 
+             While MOFA+ assumes that samples are independent and identically distributed,
+             MEFISTO overcomes this limitation by combining the factor analysis framework with Gaussian Processes,
+             which explicitly model the spatio-temporal relationships between samples (cells).
+             MEFISTO can also align samples from different groups (e.g., individuals or species)
+             that have misaligned temporal or spatial profiles.
+Inspired by:
+- MOFA+
+Method: MEFISTO
+Model:
+- Group Factor Model
+- Multi-modal
+- Spatially-informed
+- Time-resolved
+Publication: https://www.nature.com/articles/s41592-021-01343-9
+Published: true
+Task:
+- Linear Gene Programmes
+- Unsupervised Disentanglement
+Year: 2022

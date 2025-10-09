@@ -11,6 +11,7 @@ Method: MMFM
 Model:
 - Flow Matching
 - Optimal Transport
+- Time-resolved
 Publication: https://openreview.net/pdf?id=hwnObmOTrV
 Published: true
 Task:
