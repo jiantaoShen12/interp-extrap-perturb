@@ -1,0 +1,17 @@
+Code Availability: https://github.com/scverse/scvi-tools
+Description: 'scVI is a scalable deep generative model for single-cell transcriptomics that models gene expression
+ counts using a zero-inflated negative binomial (ZINB) distribution to account for overdispersion and high dropout rates. 
+ This generative process is conditioned on a low-dimensional latent vector capturing biological variation,
+ a scaling factor for sequencing depth, and categorical batch annotations. 
+ scVI served as the basis for the development of the scvi-tools ecosystem and numerous other modules for single-cell analysis.'
+Inspired by:
+- cVAE
+Method: scVI
+Model:
+- VAE
+- ZINB likelihood
+Publication: https://www.nature.com/articles/s41592-018-0229-2
+Published: true
+Task:
+- Nonlinear Gene Programmes
+Year: 2024
