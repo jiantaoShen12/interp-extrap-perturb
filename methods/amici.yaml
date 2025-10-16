@@ -16,7 +16,7 @@ Model:
 - Cross-attention
 - Spatially-informed
 Publication: https://www.biorxiv.org/content/10.1101/2025.09.22.677860v1.full.pdf
-Published: true
+Published: false
 Task:
 - Linear Gene Programmes
 - Multi-component Disentanglement
