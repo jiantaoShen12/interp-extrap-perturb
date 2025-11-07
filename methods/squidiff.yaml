@@ -1,16 +1,19 @@
 Code Availability: https://github.com/siyuh/squidiff
-Description: Squidiff integrates a diffusion model with a variational autoencoder
-  (VAE) to modulating cellular states and conditions using latent variables. Squidiff
-  can accurately capture and reproduce cellular states, and can be used to generate
-  new single-cell gene expression data over time and in response to stimuli
+Description: "Squidiff pairs a semantic encoder with a conditional Denoising Diffusion Implicit Model.
+ To model perturbations, it learns a 'direction vector' by calculating the difference between
+ control and perturbed states in the latent space. It then predicts responses in new cell types by
+ applying this vector using latent arithmetic (addition) to the new cell's latent representation.
+ Similarly, it generates transient states in continuous processes like differentiation by interpolating along start and end points.
+ Finally, it integrates an adaptor to encode chemical structures, enabling predictions for completely unseen drugs."
 Inspired by:
-- Diffusion
+- Denoising diffusion implicit models
 Method: Squidiff
 Model:
 - Diffusion Model
-Publication: https://www.biorxiv.org/content/10.1101/2024.11.16.623974v1
-Published: false
+Publication: https://www.nature.com/articles/s41592-025-02877-y
+Published: true
 Task:
 - Combinatorial Effect Prediction
 - Context Transfer
-Year: 2024
+- Unseen Perturbation Prediction
+Year: 2025

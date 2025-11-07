@@ -1,14 +1,11 @@
 Code Availability: https://github.com/theislab/cpa
-Description: 'Compositional Perturbation Autoencoder (CPA) models single-cell gene
-  expression under perturbations and covariates by decomposing expression into additive
-  latent embeddings: a basal state, perturbation effects, and covariate effects. To
-  ensure that the basal embedding is disentangled from perturbations and covariates,
-  CPA employs an adversarial training scheme: auxiliary classifiers are trained to
-  predict perturbations and covariates from the basal embedding, while the encoder
-  is updated using a combined loss that discourages the basal representation from
-  encoding such information. Perturbation embeddings are modulated by neural networks
-  applied to continuous covariates (e.g., dose or time), enabling modeling of dose-response
-  and combinatorial effects. '
+Description: 'Compositional Perturbation Autoencoder (CPA) models single-cell gene expression under perturbations and covariates
+              by decomposing expression into additive latent embeddings: a basal state, perturbation effects, and covariate effects. 
+              To ensure that the basal embedding is disentangled, CPA employs an adversarial training approach.
+              Auxiliary classifiers (discriminators) are trained to predict perturbations and covariates from the basal embedding,
+              discouraging the basal representation from encoding such information.
+              To model dose-response effects, CPA uses neural networks to encode continuous covariates and perturbants (e.g., time or dose);
+              whereas combinatorial perturbations are modeled as an additive composition of these embeddings in the latent space.'
 Inspired by:
 - scGEN
 - DANN
