@@ -1,8 +1,8 @@
 Code Availability: https://github.com/azizilab/amici
 Description: "AMICI uses multi-headed cross-attention to model how receiver cells
- integrate information from spatial neighbors by generating query embeddings (Q)
+ integrate information from spatial neighbors by generating query embeddings
  from learned cell-type-specific parameters that represent receiver identity, while neighboring non-self cells
- gene expression profiles generate keys (K) and values (V) through neural network embeddings. 
+ gene expression profiles generate keys and values through neural network embeddings. 
  Attention scores are computed as distance-weighted softmax over query-key products, 
  where each head learns interaction length scales and sender phenotypes,
  with the model reconstructing masked receiver expression as a residual from cell-type mean

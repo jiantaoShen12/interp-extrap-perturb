@@ -4,7 +4,6 @@
 
 *Individual YAML files for each computational method in the catalog*
 
-![Methods Count](https://img.shields.io/badge/methods-143-blue.svg)
 ![Format](https://img.shields.io/badge/format-YAML-green.svg)
 ![Structure](https://img.shields.io/badge/structure-standardized-orange.svg)
 
@@ -58,7 +57,7 @@ Inspired by:                           # Related methods/papers
 
 ### 🚀 **Quick Start**
 
-1. **📁 Create File** — New YAML file with descriptive filename (e.g., `my_awesome_method.yaml`)
+1. **📁 Create File** — New YAML file with descriptive filename (e.g., `my_method.yaml`)
 2. **📝 Use Template** — Copy the structure above and fill in your method's details  
 3. **✅ Validate** — Ensure all required fields are included
 4. **🔄 Auto-Process** — The filename automatically identifies the method in our system

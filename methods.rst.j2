@@ -6,14 +6,21 @@
 
 .. raw:: html
 
-     <p style="margin:0.4em 0 0.8em;">
-       Press the&nbsp;
-       <span style="color:#8B0000;font-weight:bold;">+</span>
-       in the <em>first</em> column to expand a method’s description.
+     <p style="margin:0.8em 0 1em; padding: 0.8em 1.2em; background: linear-gradient(135deg, rgba(139, 0, 0, 0.08) 0%, rgba(139, 0, 0, 0.03) 100%); border-left: 4px solid #8B0000; border-radius: 4px;">
+       <strong>💡 Tip:</strong> Click the&nbsp;
+       <span style="color:#8B0000;font-weight:bold;font-size:1.1em;">+</span>
+       in the <em>first column</em> to expand detailed method descriptions.
      </p>
 
    <style>
-   td.details-control { width:20px; text-align:center; cursor:pointer; }
+   td.details-control { 
+     width:20px; 
+     text-align:center; 
+     cursor:pointer;
+     color: #8B0000;
+     font-weight: bold;
+     font-size: 1.2em;
+   }
    td.details-control::before { content:'+'; }
    tr.shown td.details-control::before { content:'-'; }
    td.published { text-align:center; font-weight:bold; }
@@ -22,6 +29,77 @@
      display:inline-block; font-size:1.2em; vertical-align:middle; color:inherit;
    }
    a.github-link:hover { color:#8B0000; }
+   
+   /* Task and Model badges */
+   .badge {
+     display: inline-block;
+     padding: 0.25em 0.6em;
+     margin: 0.15em;
+     font-size: 0.85em;
+     font-weight: 500;
+     line-height: 1;
+     border-radius: 12px;
+     white-space: nowrap;
+   }
+   
+   .task-badge {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     color: white;
+     border: 1px solid rgba(102, 126, 234, 0.3);
+   }
+   
+   .model-badge {
+     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+     color: white;
+     border: 1px solid rgba(245, 87, 108, 0.3);
+   }
+   
+   html[data-theme="light"] .task-badge {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+   }
+   
+   html[data-theme="light"] .model-badge {
+     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+     box-shadow: 0 2px 4px rgba(245, 87, 108, 0.2);
+   }
+   
+   /* Method name styling */
+   td a[href*="doi.org"],
+   td a[href*="nature.com"],
+   td a[href*="biorxiv.org"],
+   td a[href*="cell.com"] {
+     font-weight: 600;
+     color: #8B0000;
+     text-decoration: none;
+     transition: all 0.2s ease;
+   }
+   
+   td a[href*="doi.org"]:hover,
+   td a[href*="nature.com"]:hover,
+   td a[href*="biorxiv.org"]:hover,
+   td a[href*="cell.com"]:hover {
+     color: #b30000;
+     text-decoration: underline;
+   }
+   
+   /* Published status icons */
+   td.published {
+     font-size: 1.2em;
+   }
+   
+   /* Expandable description styling */
+   .expanded-description {
+     padding: 1em;
+     background: rgba(139, 0, 0, 0.05);
+     border-left: 3px solid #8B0000;
+     line-height: 1.6;
+     font-size: 0.95em;
+   }
+   
+   html[data-theme="light"] .expanded-description {
+     background: rgba(139, 0, 0, 0.03);
+   }
    </style>
 
    <div class="table-container">
@@ -58,11 +136,11 @@
                     | list
                 -%}
                 {%- if items -%}
-                <ul>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.3em;">
                 {%- for it in items -%}
-                    <li>{{ it }}</li>
+                    <span class="badge task-badge">{{ it }}</span>
                 {%- endfor -%}
-                </ul>
+                </div>
                 {%- else -%}
                 &nbsp;
                 {%- endif -%}
@@ -89,11 +167,11 @@
                      | list
                -%}
                {%- if items -%}
-                 <ul>
+                 <div style="display: flex; flex-wrap: wrap; gap: 0.3em;">
                    {%- for it in items -%}
-                   <li>{{ it }}</li>
+                   <span class="badge model-badge">{{ it }}</span>
                    {%- endfor -%}
-                 </ul>
+                 </div>
                {%- else -%}
                  &nbsp;
                {%- endif -%}
@@ -134,7 +212,7 @@
            </td>
            #}
 
-           <td class="published">{% if m["Published"] %}✓{% else %}✗{% endif %}</td>
+           <td class="published">{% if m["Published"] %}<span style="color: #2E8B57;">✓</span>{% else %}<span style="color: #DC143C;">✗</span>{% endif %}</td>
             <td>
               {%- set url = m['Code Availability'] -%}
               {%- if url and url != '-' and url|lower not in ['nan', 'na', 'none'] -%}
@@ -158,7 +236,7 @@
    jQuery(function($){
       $('#methods-table').DataTable({
         order:      [[2,'desc']],
-        pageLength: 5,
+        pageLength: 10,
         lengthMenu: [5,10,20,50,200],
         scrollX:    true,
         autoWidth:  false
@@ -169,7 +247,7 @@
        if(row.child.isShown()){
          row.child.hide(); tr.removeClass('shown');
        } else {
-         row.child('<div style="padding:0.5em;">'+tr.data('description')+'</div>').show();
+         row.child('<div class="expanded-description">'+tr.data('description')+'</div>').show();
          tr.addClass('shown');
        }
      });
