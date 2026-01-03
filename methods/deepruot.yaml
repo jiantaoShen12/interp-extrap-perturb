@@ -1,0 +1,26 @@
+Method: DeepRUOT
+Year: 2025
+Published: true
+
+Description: |
+  DeepRUOT learns Regularized Unbalanced Optimal Transport (RUOT) to reconstruct continuous unbalanced stochastic dynamics from sparse time-resolved snapshots. By introducing Fisher-regularization, the method simultaneously inferring transition velocity, growth/death rates and log density without any prior knowledge. The framework transforms time-series transcriptomics data into a virtual dynamical system to identify single-cell growth and transition patterns, eliminating false transitions, and constructing the Waddington developmental landscape. .
+
+Task:
+  - Trace Cell Populations
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+
+Publication: https://openreview.net/forum?id=gQlxd3Mtru
+Code Availability: https://github.com/zhenyiizhang/DeepRUOTv2.git
+
+Model:
+  - Neural ODE
+  - Flow Matching
+  - Optimal Transport
+  - Time-resolved
+  - Fisher-regularized Unbalanced Dynamics
+
+Inspired by:
+  - Regularized Unbalanced Optimal Transport
+  - Schrödinger Bridge
