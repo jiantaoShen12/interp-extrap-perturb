@@ -1,0 +1,29 @@
+Method: CytoBridge
+Year: 2025
+Published: true
+
+Description: |
+  CytoBridge approximates the Unbalanced Mean Field Schrödinger Bridge (UMFSB) to model unbalanced stochastic cell dynamics with cell-cell interactions from snapshot data.It uses neural networks and flow mathcing to explicitly learn transition velocity, growth/death rates, log density, and interaction potentials directly from data. The framework offers a unified approach to generative modeling of time-series transcriptomics, elucidating how intercellular communication influences cellular processes and behaviors.
+
+Task:
+  - Trace Cell Populations
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+
+Publication: https://openreview.net/pdf?id=Z6DJJIN8IJ
+Code Availability: https://github.com/zhenyiizhang/CytoBridge.git
+
+Model:
+  - Neural ODE
+  - Flow Matching
+  - Optimal Transport
+  - Time-resolved
+  - Mean Field Model
+  
+Inspired by:
+  - Schrödinger Bridge
+  - Optimal Transport
+  - Mean Field Problem 
+
+
